@@ -1,0 +1,12 @@
+.caja {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    margin: 10px;
+    
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap; /* por defecto el valor es nowrap y hace que se hagan chicos los elementos*/
+}

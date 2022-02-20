@@ -1,0 +1,23 @@
+@charset "UTF-8";
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+
+.caja {
+  width: 100px;
+  height: 100px;
+}
+
+.caja label {
+  font-size: 20px;
+}
+
+/*
+Comando para compilar:
+> sass archivo.scss salida.css
+Ejemplo: > sass index.scss index.css
+Si se coloca un parámetro --watch estará escuchando en background y cada vez que se modifica algo se replica en el CSS
+*/
+
+/*# sourceMappingURL=index.css.map */

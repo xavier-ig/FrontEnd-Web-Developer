@@ -1,0 +1,21 @@
+#howto {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#howto .steps {
+    border: 1px #8a8c8d solid;
+    border-radius: 5px;
+    /*display: flex;*/
+    padding: 10px;
+    margin: 10px;
+  }
+
+#howto img {
+    width: 250px;
+    height: 300px;
+}

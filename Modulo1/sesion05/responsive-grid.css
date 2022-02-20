@@ -1,0 +1,14 @@
+.caja {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    margin: 10px;
+    
+}
+
+.contenedor {
+    display: grid;
+/*    grid-template-columns: 150px 150px 150px 150px; */
+    grid-template-columns: repeat(auto-fill, 150px);
+/*    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */ /* Esta es otra manera de hacerlo y se comporta distinto */
+}

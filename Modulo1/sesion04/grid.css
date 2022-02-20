@@ -1,0 +1,36 @@
+body {
+    margin: 20px;
+}
+
+.caja {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    margin:10px;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    border: 1px solid black;
+}
+
+.contenedor{
+    border: 2px dashed black;
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    /* Esto te hace por fracciones de la pantalla, puedes usar 1fraccion o 2fracciones etc
+    Y cada información es una columna
+    */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: 200px 200px;
+    grid-template-rows 200px 200px;
+    
+    /* Esto alinea los elementos dentro de cada celda del grid */
+    justify-items: center;
+    align-items: center;
+
+    /* Respecto al espacio sobrande del grid */
+    justify-content: center;
+    align-content: center;
+}

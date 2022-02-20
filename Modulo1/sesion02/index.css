@@ -1,0 +1,94 @@
+/*
+    selector {
+        propiedad1: valor;
+        propiedad2: valor;
+        .
+        .
+        .
+        propiedadN: valor;
+    }
+
+    matcha - Fira Fans
+    Tit grande - Playfair Display
+    Texto - Roboto Slab
+*/
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    text-align: center;
+    height: 70px;
+    background-color: #fffbf7;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+nav > div > img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Selecciona los divs dentro de la etiqueta nav */
+nav > div {
+    display: inline-block;
+}
+
+#logo {
+    float:left;
+}
+
+#logo > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#logo > h1 {
+    font-size: 45px;
+    margin: 0;
+    color: #1b6456;
+    margin-left: 10px;
+}
+
+#menu {
+    margin-top: 20px;
+}
+
+#menu > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu > ul > li {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 18px;
+    color: #1b6456;
+    font-weight: 600;
+}
+
+#sign-in {
+    float: right;
+    font-size: 18px;
+    margin-top: 13px;
+}
+
+#sign-in a {
+    color: #67b54b;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#sign-in button{
+    font-size: 18px;
+    color: white; /*Color de letra*/
+    background-color: #67b54b;
+    border: none; /*Quita el bordo*/
+    border-radius: 4px; /*Redondea esquina*/
+    padding: 10px;
+    font-weight: 600;
+    margin-left: 10px;
+}

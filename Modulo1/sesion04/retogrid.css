@@ -1,0 +1,35 @@
+body {
+    margin: 0px;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+}
+
+/*.contenedor #row1 {
+    grid-column-start: 1;
+    grid-column-end: span col1-start;
+}*/
+
+.contenedor #row1 > img {
+    width: 600px;
+}
+
+.contenedor section article{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+.contenedor section article img{
+    width: 200px;
+    height: 200px;
+}
+
+.contenedor section article .content{
+    background-color: #001a36;
+    color: white;
+    padding-left: 20px;
+}
+

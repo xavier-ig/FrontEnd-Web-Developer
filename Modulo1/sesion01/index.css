@@ -1,0 +1,24 @@
+/*
+    Sintaxis:
+
+    selector {
+        propiedad : valor;
+
+    }
+
+    etiqueta1, etiqueta2, etiqueta3, ..., etiquetaN {
+        ...
+    }
+*/
+
+.centrado {
+    text-align: center;
+}
+
+.izquierda {
+    text-align: left;
+}
+
+.derecha {
+    text-align: right;
+}

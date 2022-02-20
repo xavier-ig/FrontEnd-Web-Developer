@@ -1,0 +1,73 @@
+.caja {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    margin: 10px;
+    
+}
+
+/* 
+    @media (breakpoint) {
+    }
+
+    breackpoint 
+        puede ser un tamaño en específico o en pixeles 
+        pero es más usado usar - mayor que x px
+            min-width: Xpx
+            
+    @media (min-width: 1000px)
+
+    o la otra opción es menor
+    max-width
+
+    @media (max-width: 1000px)
+
+    lo que mas se usa es jugar con rangos de tamaños
+    Aplicar un estilo entre los 500px a los 1000px
+
+    @media (min-width: 500px) and (max-width: 1000px)
+
+    con esto se pueden agregar o ocultar elementos
+*/
+
+@media (min-width: 1000px) {
+    .caja{
+        width: 800px;
+        height: 800px;
+        background-color: green;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 999px) {
+    .caja{
+        width: 400px;
+        height: 400px;
+        background-color: blue;
+    }
+}
+
+/*
+
+Tamaños estandar (sugerencias)
+
+Extragrande
+@media (min-width: 1200px) { 
+}
+
+Desktop
+@media (min-width: 992px) and (max-width: 1199px) { 
+}
+
+Tablet
+@media (min-width: 768px) and (max-width: 991px) { 
+}
+
+Pequeños / movil horizontal
+@media (min-width: 576px) and (max-width: 767px) { 
+}
+
+Pequeños / movil vertical / reloj
+@media (max-width: 575px) { 
+}
+
+*/

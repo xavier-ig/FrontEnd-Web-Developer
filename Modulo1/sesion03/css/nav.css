@@ -1,0 +1,23 @@
+header {
+    text-align: center;
+    background-color: #fffbf7;
+    padding-top: 70px;
+}
+
+header > h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 3.5rem;
+    color: #1b6456;
+}
+
+header > p {
+    font-size: 20px;
+    color: #8a8c8d;
+}
+
+header > #small-text {
+    text-align: center;
+    display: block;
+    color: gray;
+    font-weight: 600;
+}
