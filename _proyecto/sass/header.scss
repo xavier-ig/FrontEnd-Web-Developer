@@ -1,0 +1,37 @@
+@use "var" as *;
+
+header{
+    background-color: $header-background-color;
+    text-align: center;
+    color: $font-color-clear;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    & > #email-input {
+        justify-content: center;
+        height: 30px;
+    
+        & > input {
+            height: 24px;
+            width: 250px;
+
+        }
+        & > button {
+          padding-left: 20px;
+          padding-right: 20px;
+          height: 100%;
+          background-color: $nav-background-color;
+          color: $font-color-clear;
+          border: $font-color-clear solid 1px;
+          border-radius: 3px;
+          
+        }
+    }
+
+    & > img {
+        width: 90%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        align-self: center;
+    }
+}

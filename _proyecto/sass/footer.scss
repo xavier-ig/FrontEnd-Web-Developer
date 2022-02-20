@@ -1,0 +1,13 @@
+@use "var" as *;
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $footer-background-color;
+    color: $font-color-clear;
+    margin-top: 50px;
+    
+    & p{
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form action="https://www.gran-turismo.com/us/api/gt7sp/profile/?user_no=15333889&job=3" method="post">
+            <button>Press</button>
+        </form>
+    
+        <form action="https://www.kudosprime.com/gts/gt_com_api.php?mode=get_profile_by_name&output=profile_id&online_id=MX_Xavier_IG" method="post">
+            <input id="online_id" type="search"  value="" placeholder="PlayStation ID" >
+            <button>Find user</button>
+        </form>
+        
+
+    </body>
+
+    <form action="https://www.gran-turismo.com/us/api/gt7sp/profile/?id=MX_Xavier_IG&job=12" method="post">
+        
+        <button>Buscar 3</button>
+    </form>
+<!--
+
+
+    Documentación no oficial de la API de GT Sport
+    https://github.com/alexpersian/gt7sp-api
+
+$("#online_id").bind('keypress',function(e){if(e.keyCode === 13) {
+    $("#psearch_do").trigger('click');
+    $(this).blur();
+} });
+$("#psearch_do").bind('click',function(){
+var v = $('#online_id').val();
+$('#profile_search_result').html('Searching...');
+$.post("gt_com_api.php", {'mode':'get_profile_by_name','output':'links', 'online_id':[v]} , function( data ) {        
+    window.last = data;
+    $('#profile_search_result').html(data);
+});
+})
+
+-->
+
+
+</html>
+
+

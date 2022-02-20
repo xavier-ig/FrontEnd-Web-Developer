@@ -1,0 +1,31 @@
+let requestOptions = {
+  method: 'GET'
+};
+
+fetch("http://api.weatherapi.com/v1/current.json?key=5&q=Mexico City&aqi=no", requestOptions)
+  .then(response =>
+    response.text())
+  .then(result => {
+    console.log('result', JSON.parse(result))
+    const datosClima = JSON.parse(result)
+    const { current: { condition, feelslike_c }  } = datosClima
+    console.log(condition, 'condition')
+    document.getElementById('clima').innerHTML = `
+    <div class="clima">
+      <h1 class="clima-title">Ciudad de México</h1>
+      <div class="clima-distribution">
+        <div class="clima-elements">
+          <p>Condición</p>
+          <img src='https:${condition.icon}' alt="condiciones">
+          <p>${condition.text}</p>
+        </div>
+        <div class="clima-elements">
+          <p>Sensación Térmica</p>
+          <p>${feelslike_c} °C</p>
+        </div>
+      </div>
+    </div>
+    `
+
+  })
+  .catch(error => console.log('error', error));

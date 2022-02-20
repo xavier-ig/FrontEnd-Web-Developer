@@ -1,0 +1,243 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #D0D0D0;
+  font-family: "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #0A0C1A;
+  color: white;
+}
+nav > #menu {
+  width: 30%;
+}
+nav > #menu > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+nav > #menu > ul > li {
+  font-size: 16px;
+}
+nav a {
+  align-self: center;
+  display: none;
+}
+nav a > svg {
+  width: 30px;
+  fill: white;
+  border: solid white;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+@media (min-width: 992px) {
+  nav > #menu {
+    display: block !important;
+  }
+  nav > a {
+    display: none;
+  }
+}
+@media (min-width: 576px) and (max-width: 991px) {
+  nav > #menu {
+    display: none;
+  }
+  nav > a {
+    display: block;
+  }
+}
+@media (max-width: 575px) {
+  nav > #menu {
+    display: none;
+  }
+  nav > a {
+    display: block;
+  }
+}
+header {
+  background-color: #3C4455;
+  text-align: center;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+header > #email-input {
+  justify-content: center;
+  height: 30px;
+}
+header > #email-input > input {
+  height: 24px;
+  width: 250px;
+}
+header > #email-input > button {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 100%;
+  background-color: #0A0C1A;
+  color: white;
+  border: white solid 1px;
+  border-radius: 3px;
+}
+header > img {
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #15212F;
+  color: white;
+  margin-top: 50px;
+}
+footer p {
+  font-size: 12px;
+}
+
+#myProfile {
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+#myProfile h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#myProfile #myProfileDisclaimer {
+  font-size: 12px;
+}
+#myProfile > #psn_user-input {
+  margin-top: 10px;
+  justify-content: center;
+  height: 30px;
+}
+#myProfile > #psn_user-input > input {
+  height: 24px;
+  width: 150px;
+}
+#myProfile > #psn_user-input > button {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 100%;
+  background-color: #0A0C1A;
+  color: white;
+  border: #3C4455 solid 1px;
+  border-radius: 3px;
+}
+#myProfile > #tableResults {
+  margin-top: 10px;
+  align-self: center;
+}
+#myProfile > #tableResults > thead {
+  color: #0A0C1A;
+}
+#myProfile > #tableResults .tdHeader {
+  text-align: right;
+  color: #0A0C1A;
+  font-style: italic;
+  font-weight: 300;
+}
+#myProfile > #tableResults .tdData {
+  text-align: left;
+  color: #0A0C1A;
+  font-weight: 600;
+}
+
+#dailyRaces {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
+}
+#dailyRaces > #raceBox {
+  margin: 10px;
+  border: solid #b9b9b9;
+  border-radius: 2px;
+  border-width: 1px;
+}
+#dailyRaces > #raceBox h1 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#dailyRaces > #raceBox h2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+  font-style: italic;
+}
+#dailyRaces > #raceBox p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+#dailyRaces > #raceBox p img {
+  width: 150px;
+}
+#dailyRaces > #raceBox > #trackA {
+  background-image: url("../images/raceA.jpeg");
+  width: 380px;
+  min-height: 210px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+}
+#dailyRaces > #raceBox > #trackB {
+  background-image: url("../images/raceB.jpeg");
+  width: 380px;
+  min-height: 210px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+}
+#dailyRaces > #raceBox > #trackC {
+  background-image: url("../images/raceC.jpeg");
+  width: 380px;
+  min-height: 210px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+}
+#dailyRaces > #raceBox > #record {
+  color: #0A0C1A;
+  padding: 10px;
+}
+#dailyRaces > #raceBox > #record > .yourRecord {
+  display: flex;
+}
+#dailyRaces > #raceBox > #record > .bestTime {
+  display: flex;
+}
+#dailyRaces > #raceBox > #record .recordTitle {
+  color: #0A0C1A;
+  padding-left: 5px;
+  font-weight: 500;
+}
+#dailyRaces > #raceBox > #record .recordResults {
+  color: #3fa7ca;
+  padding-left: 5px;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=index.css.map */
