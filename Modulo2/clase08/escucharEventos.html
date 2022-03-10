@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Escuchando eventos</title>
+    </head>
+    <body>
+        <p>No hay un evento aqui</p>
+
+        <button>Click me</button>
+
+        <p>Ahora si No hay un evento aqui</p>
+
+        <h1 id="title">Hello World!</h1>
+
+        <button id="Red">Red</button>
+        <button id="Blue">Blue</button>
+        <button id="Black">Black</button>
+
+        <script>
+            let button = document.querySelector('button');
+
+            let paragraph = document.getElementsByTagName('p')[1];
+
+            function soloUnaVez(){
+                console.log('Button clicked');
+                button.removeEventListener('click', soloUnaVez);
+            }
+            button.addEventListener('click', soloUnaVez);
+
+            paragraph.addEventListener('click', () => {
+                console.log('Paragraph clicked');
+            });
+
+            let title = document.getElementById('title');
+            
+            let btnRed = document.getElementById('Red');
+            let btnBlue = document.getElementById('Blue');
+            let btnBlack = document.getElementById('Black');
+
+            btnRed.addEventListener('click', () => {title.style.color = 'Red'})
+            btnBlue.addEventListener('click', () => {title.style.color = 'Blue'})
+            btnBlack.addEventListener('click', () => {title.style.color = 'Black'})
+
+        </script>
+    </body>
+</html>

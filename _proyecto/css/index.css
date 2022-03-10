@@ -71,23 +71,6 @@ header {
   padding-left: 30px;
   padding-right: 30px;
 }
-header > #email-input {
-  justify-content: center;
-  height: 30px;
-}
-header > #email-input > input {
-  height: 24px;
-  width: 250px;
-}
-header > #email-input > button {
-  padding-left: 20px;
-  padding-right: 20px;
-  height: 100%;
-  background-color: #0A0C1A;
-  color: white;
-  border: white solid 1px;
-  border-radius: 3px;
-}
 header > img {
   width: 90%;
   margin-top: 20px;
@@ -139,20 +122,28 @@ footer p {
   border: #3C4455 solid 1px;
   border-radius: 3px;
 }
-#myProfile > #tableResults {
+#myProfile > #profileResponse {
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+#myProfile > #profileResponse > #tableResults {
   margin-top: 10px;
   align-self: center;
 }
-#myProfile > #tableResults > thead {
+#myProfile > #profileResponse > #tableResults > thead {
   color: #0A0C1A;
 }
-#myProfile > #tableResults .tdHeader {
+#myProfile > #profileResponse > #tableResults .tdHeader {
   text-align: right;
   color: #0A0C1A;
   font-style: italic;
   font-weight: 300;
 }
-#myProfile > #tableResults .tdData {
+#myProfile > #profileResponse > #tableResults .tdData {
   text-align: left;
   color: #0A0C1A;
   font-weight: 600;

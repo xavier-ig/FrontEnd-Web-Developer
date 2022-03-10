@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Ejemplo 2: Cambiando el DOM</title>
+  </head>
+  <body>
+    <p>One</p>
+    <p>Two</p>
+    <p>Three</p>
+
+    <button onclick="cambiarOrden()">Mover</button>
+
+    <script>
+        // Code goes here
+        let paragraphs = document.body.getElementsByTagName('p');
+        console.log('Primer nodo', paragraphs[0]);
+        console.log('Segundo nodo', paragraphs[1]);
+        console.log('Tercer nodo', paragraphs[2]);
+
+        function cambiarOrden(){
+            //Esta función puede cambiar de orden y en automático quedan ahora en el nuevo orden
+            document.body.insertBefore(paragraphs[2], paragraphs[1])
+            console.log('Primer nodo', paragraphs[0]);
+            console.log('Segundo nodo', paragraphs[1]);
+            console.log('Tercer nodo', paragraphs[2]);
+        }
+
+    </script>
+  </body>
+</html>

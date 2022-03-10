@@ -30,57 +30,19 @@
         <header>
             <h1>Improve your gaming and #findyourline</h1>
             <p>Review your lap times live and subscribe to receive weekly updates and insight to improve your driving skills</p>
-            <div id="email-input">
-              <input type="text" placeholder="Enter email address"/>
-              <button>Subscribe</button>
-            </div>
             <img src="images/home.jpeg" />
         </header>
 
         <section id="myProfile">
-            <h3>Search Players of Gran Turismo</h3>
+            <h3>Search Players of Gran Turismo Sport</h3>
             <div id="psn_user-input">
-                <input type="text" placeholder="PlayStation ID"/>
-                <button>Search</button>
+                <input type="text" placeholder="PlayStation ID" id="psnProfile"/>
+                <button id="btnSearchProfile">Search</button>
             </div>
 
             <p id="myProfileDisclaimer">This search tool requires the exact PSN profile name.<br/>Profile name contains no "space", but can contains one or several "_" (underscore) instead.<br/>If you still can't find a profile name, it may have been renamed and still exists here as an old name version.</p>
 
-            <div id="resultsAPI"></div>
-
-            <table id="tableResults">
-                <thead>
-                    <tr><th colspan="2">Sports Mode</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td class="tdHeader">Races: </td><td class="tdData">105 | Finished: 103 (103*)</td></tr>
-                    <tr><td class="tdHeader">Performances: </td><td class="tdData"><b>11,986</b> (Top 15%)</td></tr>
-                    <tr><td class="tdHeader">Sportmanship (SR): </td> <td class="tdData"><b>99</b>/99</td></tr>
-                    <tr><td class="tdHeader">Wins: </td><td class="tdData">4 (4*) | Daily: 4 / FIA:</td></tr>
-                    <tr><td class="tdHeader">Consecutive Clean Races: </td> <td class="tdData">4</td></tr>
-                    <tr><td class="tdHeader">Pole Position: </td><td class="tdData">6 | Daily: 6 / FIA:</td></tr>
-                    <tr><td class="tdHeader">Leading Laps: </td><td class="tdData">3.9% | Daily: 3.9%</td></tr>
-                    <tr><td class="tdHeader">Fastest Laps: </td><td class="tdData">12</td></tr>
-                    <tr><td class="tdHeader">Current Car: </td><td class="tdData">Greddy Fugu Z</td></tr>
-                    <tr><td class="tdHeader">Distinct Days Driving: </td><td class="tdData">103</td></tr>
-                    <tr><td class="tdHeader">Campaign School: </td><td class="tdData">100 %</td></tr>
-                    <tr><td class="tdHeader">Campaign Circuit: </td><td class="tdData">100 %</td></tr>
-                    <tr><td class="tdHeader">Campaign Mission: </td><td class="tdData">100 %</td></tr>
-                    <tr><td class="tdHeader">Car(s): </td><td class="tdData">198</td></tr>
-                    <tr><td class="tdHeader">Car(s) bought: </td><td class="tdData">55</td></tr>
-                    <tr><td class="tdHeader">Credits earned: </td><td class="tdData">13,474,455</td></tr>
-                    <tr><td class="tdHeader">Mi earned: </td><td class="tdData">151,190</td></tr>
-                    <tr><td class="tdHeader">Xp Level: </td><td class="tdData">35 | 12% (3552 pts)</td></tr>
-                    <tr><td class="tdHeader">Distance driven: </td><td class="tdData">9,397.318 Km</td></tr>
-                    <tr><td class="tdHeader">Time driven: </td><td class="tdData">2 days, 10 hours, 51 min and 54 s.</td></tr>
-                    <tr><td class="tdHeader">Drift Points: </td><td class="tdData">890,995</td></tr>
-                    <tr><td class="tdHeader">Drift Pts / meter: </td><td class="tdData">0.09</td></tr>
-                    <tr><td class="tdHeader">Liveries: </td><td class="tdData">30</td></tr>
-                    <tr><td class="tdHeader">Photos: </td><td class="tdData">21</td></tr>
-                    <tr><td class="tdHeader">Profile iD: </td><td class="tdData">15333889 (<a target="_blank" href="https://www.gran-turismo.com/us/gtsport/user/profile/15333889/overview">Link to Official</a>)</td></tr>
-                </tbody>
-            </table>
-            <p id="myProfileDisclaimer">*: The Gran Turismo server has also stored this value for this profile.<br/>The reason for the discrepancy is uncertain, but if you delete or lose your saved game, this number probably precludes races prior to the deletion or incident.<br/>If you have played the demo, races performed during the demonstration period may not be included.</p>
+            <div id="profileResponse"></div>
         </section>
 
         <section id="dailyRaces">
@@ -141,7 +103,7 @@
             <p>Copyright 2022 nameofthesite.com - "Gran Turismo" is a trademark of Sony Computer Entertainment Inc.</p>
         </footer>
 
-        <script src="app.js"></script>
+        <script src="searchProfile.js"></script>
         <script type="text/javascript">
             /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
             function myMenu() {

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Key Events</title>
+    </head>
+    <body>
+        <h2 >Press Enter this page to turn it blue</h2>
+
+        <h2 >Press Ctrl + Enter to turn this page orage</h2>
+        
+        <script>
+            window.addEventListener('keydown', (event) => {
+                if(event.key === 'Enter') document.body.style.background = 'lightblue';
+                if(event.key === 'Enter' && event.ctrlKey) document.body.style.background = 'orange';
+                if(event.key === ' ') document.body.style.background = 'white';
+    
+            })
+
+        </script>
+    </body>
+</html>

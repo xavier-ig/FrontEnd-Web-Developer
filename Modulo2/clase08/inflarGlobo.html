@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="utf8" />
+    <title>Reto 1: Inflar un globo</title>
+  </head>
+  <body>
+
+    <p>🎈</p>
+
+    <script>
+      // Code goes here
+
+        /*
+        En este reto el globo (:balloon:) debe inflarse (aumentar su tamaño) un 10% al presionar la flecha hacia arriba y desinflarse (disminuir su tamaño) un 10% el presionar la flecha hacia abajo.
+
+        Los emojis son considerados como texto por lo que puedes controlar el tamaño con la propiedad de CSS font-size. El valor inicial debe ser de 20px.
+
+        Los nombres de las teclas de flecha que necesitas son ArrowUp y ArrowDown. Con el método preventDefault() podemos evitar que la página haga un scroll al presionar estas teclas.
+
+        Por último, si el tamaño del globo es mayor a 80px se debe reemplazar por el emoji :boom: y eliminar el event handler.
+        */
+
+
+
+        let paragraph = document.querySelector('p');
+
+
+        window.addEventListener('keydown', (event) => {
+            event.preventDefault()
+
+            if(event.key === 'ArrowUp') paragraph.style.fontSize = paragraph.style.fontSize*2;
+            if(event.key === 'ArrowDown') paragraph.style.fontSize = paragraph.style.fontSize*3;
+
+
+            console.log(event.key);
+        })
+
+    </script>
+  </body>
+</html>
