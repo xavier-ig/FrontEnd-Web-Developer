@@ -1,4 +1,10 @@
 
+/*
+  Autor: Javier Ibarra
+  Fecha: 2022-03-10
+  Proyecto Módulo 2: Curso Front End Web Developer BEDU-UTM
+*/
+
 //Función que busca el perfil PSN y posterior busca el perfil GTSport
 function searchProfilePSN(psnProfile){
     let formdata = new FormData();
@@ -18,20 +24,15 @@ function searchProfilePSN(psnProfile){
             if(result === "Profile not found."){
                 fillNoProfile(psnProfile);
             }else{
-                let strGTProfile = getGTProfile(result);
-
-                searchProfileGranTurismo(strGTProfile);
+                searchProfileGranTurismo(getGTProfile(result));
             }
         })
         .catch(error => console.log('Error searching profile: ', error));
 }
 
 //Si el perfil de PSN existe debe extraer el perfil de Gran Turismo
-function getGTProfile(strResult){
-    let arrString = strResult.split("=");
-    let str = arrString[2].split("\"");
-    
-    return str[0];
+function getGTProfile(strResult){    
+    return strResult.split("=")[2].split("\"")[0];
 }
 
 //Si el perfil de PSN no existe manda mensaje al HTML
@@ -59,61 +60,54 @@ function strAddCommas(strNumber){
     return strNumber.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
+//Asigna la letra de la licencia obtenida al jugar de manera online
+function getDR(dr_class){
+    switch(dr_class){
+      case "1": 
+        return "E"; 
+      case "2": 
+        return "D"; 
+      case "3": 
+        return "C"; 
+      case "4": 
+        return "B"; 
+      case "5": 
+        return "A"; 
+      case "6": 
+        return "A+"; 
+      case "7": 
+        return "S"; 
+    }
+    return "";
+}
+
+//Asigna la letra de la licencia de Safety en base a los puntos
+function getSR(sr){
+    switch(true){
+      case (sr > 80): 
+        return "S"; 
+      case (sr > 65): 
+        return "A"; 
+      case (sr > 40): 
+        return "B"; 
+      case (sr > 20): 
+        return "C";       
+      case (sr > 10): 
+        return "D"; 
+      case (sr <= 10): 
+       return  "E"; 
+    }
+    return "";
+}
+
 //Llena el DOM con la información del perfil
 function fillProfile(datosStats){
     let stats = JSON.parse(datosStats.stats.stats);
     let cr_total = strAddCommas(stats.credit_earned);
     let performance = strAddCommas(datosStats.stats.driver_point);
     let mi_earned = strAddCommas(stats.mileage_earned);
-    let dr_license = "";
-    let sr_license = "";
-    let sr = Number(datosStats.stats.manner_point);
-
-    //Asigna la letra de la licencia obtenida al jugar de manera online
-    switch(datosStats.stats.driver_class){
-      case "1": 
-        dr_license = "E"; 
-        break;
-      case "2": 
-        dr_license = "D"; 
-        break;
-      case "3": 
-        dr_license = "C"; 
-        break;
-      case "4": 
-        dr_license = "B"; 
-        break;
-      case "5": 
-        dr_license = "A"; 
-        break;
-      case "6": 
-        dr_license = "A+"; 
-        break;
-      case "7": 
-        dr_license = "S"; 
-    }
-
-    //Asigna la letra de la licencia de Safety en base a los puntos
-    switch(true){
-      case (sr > 80): 
-        sr_license = "S"; 
-        break;
-      case (sr > 65): 
-        sr_license = "A"; 
-        break;
-      case (sr > 40): 
-        sr_license = "B"; 
-        break;
-      case (sr > 20): 
-        sr_license = "C"; 
-        break;
-      case (sr > 10): 
-        sr_license = "D"; 
-        break;
-      case (sr <= 10): 
-        sr_license = "E"; 
-
-    }
+    let dr_license = getDR(datosStats.stats.driver_class);
+    let sr_license = getSR(Number(datosStats.stats.manner_point));
 
     //Modifica el DOM agregando la tabla con la información del usuario que se ha consultado
     document.getElementById("profileResponse").innerHTML = `
