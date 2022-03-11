@@ -106,6 +106,7 @@ function fillProfile(datosStats){
     let cr_total = strAddCommas(stats.credit_earned);
     let performance = strAddCommas(datosStats.stats.driver_point);
     let mi_earned = strAddCommas(stats.mileage_earned);
+    let strXP = strAddCommas(stats.xp);
     let dr_license = getDR(datosStats.stats.driver_class);
     let sr_license = getSR(Number(datosStats.stats.manner_point));
 
@@ -124,7 +125,7 @@ function fillProfile(datosStats){
               <tr><td class="tdHeader">Car(s) bought: </td><td class="tdData">${stats.buy_car_count}</td></tr>
               <tr><td class="tdHeader">Credits earned: </td><td class="tdData">${cr_total}</td></tr>
               <tr><td class="tdHeader">Mi earned: </td><td class="tdData">${mi_earned}</td></tr>
-              <tr><td class="tdHeader">Xp Level: </td><td class="tdData">${stats.level} | ${stats.level_progress}% (${stats.xp} pts)</td></tr>
+              <tr><td class="tdHeader">Xp Level: </td><td class="tdData">${stats.level} | ${stats.level_progress}% (${strXP} pts)</td></tr>
               <tr><td class="tdHeader">Liveries: </td><td class="tdData">${stats.livery_count}</td></tr>
               <tr><td class="tdHeader">Photos: </td><td class="tdData">${stats.photo_count}</td></tr>
               <tr><td class="tdHeader">Nick Name: </td><td class="tdData">${stats.nickname}</td></tr>
