@@ -1,9 +1,10 @@
-
 /*
   Autor: Javier Ibarra
-  Fecha: 2022-03-10
-  Proyecto Módulo 2: Curso Front End Web Developer BEDU-UTM
+  v1.0  fecha: 2022-03-10   Proyecto Módulo 2: Curso Front End Web Developer BEDU-UTM
+  v2.0  fecha: 2022-04-23   Proyecto Módulo 3: Curso Front End Web Developer BEDU-UTM
 */
+
+const urlKudosPrime = "https://www.kudosprime.com/gts/gt_com_api.php";
 
 //Función que busca el perfil PSN y posterior busca el perfil GTSport
 function searchProfilePSN(psnProfile){
@@ -17,7 +18,7 @@ function searchProfilePSN(psnProfile){
         redirect: 'follow'
     };
 
-    fetch("https://www.kudosprime.com/gts/gt_com_api.php", requestOptions)
+    fetch(urlKudosPrime, requestOptions)
         .then(response => response.text())
         .then(result => {
             //Valida perfil
@@ -55,10 +56,7 @@ function searchProfileGranTurismo(gtProfile){
         .catch(error => console.log('error', error));
 }
 
-//Agrega comas cada 3 dígitos para convertir un número grande (miles, millones)
-function strAddCommas(strNumber){
-    return strNumber.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+
 
 //Asigna la letra de la licencia obtenida al jugar de manera online
 function getDR(dr_class){

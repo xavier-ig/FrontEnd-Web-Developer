@@ -1,0 +1,10 @@
+Instalar Webpack + Webpack-cli
+
+    > npm install --save-dev webpack webpack-cli
+
+Instalar dependencias:
+
+    > npm install colors
+
+
+--- Node_Modules --- No se toca! Este se crea al instalar el webpack

@@ -1,0 +1,6 @@
+#Ignoramos todo lo que está dentro de node_modules
+node_modules/
+
+#Ignoramos todo dentro de dist pero no el archivo .gitkeep para que se cree la carpeta
+dist/*
+!dist/.gitkeep 
