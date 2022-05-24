@@ -1,0 +1,10 @@
+@use "var" as *;
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: $body-background-color;
+    font-family: $font-family;
+    display: flex;
+    flex-direction: column;
+}

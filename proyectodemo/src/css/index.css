@@ -1,0 +1,171 @@
+body {
+/*  margin: 0; */
+/*  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0px;
+  padding: 0px;
+  background-color: #D0D0D0;
+  font-family: "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.margenbody {
+  margin: 0px;
+  padding: 0px;
+  background-color: #D0D0D0;
+  font-family: "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #0A0C1A;
+  color: white;
+}
+nav > #menu {
+  width: 30%;
+}
+nav > #menu > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+nav > #menu > ul > li {
+  font-size: 16px;
+}
+nav a {
+  align-self: center;
+  display: none;
+}
+nav a > svg {
+  width: 30px;
+  fill: white;
+  border: solid white;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+@media (min-width: 992px) {
+  nav > #menu {
+    display: block !important;
+  }
+  nav > a {
+    display: none;
+  }
+}
+@media (min-width: 576px) and (max-width: 991px) {
+  nav > #menu {
+    display: none;
+  }
+  nav > a {
+    display: block;
+  }
+}
+@media (max-width: 575px) {
+  nav > #menu {
+    display: none;
+  }
+  nav > a {
+    display: block;
+  }
+}
+
+.header {
+  background-color: #3C4455;
+  text-align: center;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.header > div > img {
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #15212F;
+  color: white;
+  margin-bottom: 10px;
+}
+.footer p {
+  font-size: 12px;
+}
+
+#myProfile {
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+#myProfile h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#myProfile #myProfileDisclaimer {
+  font-size: 12px;
+}
+#myProfile > #psn_user-input {
+  margin-top: 10px;
+  justify-content: center;
+  height: 30px;
+}
+#myProfile > #psn_user-input > input {
+  height: 24px;
+  width: 150px;
+}
+#myProfile > #psn_user-input > button {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 100%;
+  background-color: #0A0C1A;
+  color: white;
+  border: #3C4455 solid 1px;
+  border-radius: 3px;
+}
+#myProfile > #profileResponse {
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+#myProfile > #profileResponse > #tableResults {
+  margin-top: 10px;
+  align-self: center;
+}
+#myProfile > #profileResponse > #tableResults > thead {
+  color: #0A0C1A;
+}
+#myProfile > #profileResponse > #tableResults .tdHeader {
+  text-align: right;
+  color: #0A0C1A;
+  font-style: italic;
+  font-weight: 300;
+}
+#myProfile > #profileResponse > #tableResults .tdData {
+  text-align: left;
+  color: #0A0C1A;
+  font-weight: 600;
+}
