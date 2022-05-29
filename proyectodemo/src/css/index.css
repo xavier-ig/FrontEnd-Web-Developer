@@ -22,6 +22,10 @@ a{
   color: #0A0C1A;
 }
 
+.container{
+  margin-top: 50px;
+}
+
 .navbar {
   width: 100%;
   overflow: auto;
@@ -29,6 +33,7 @@ a{
   justify-content: space-around;
   background-color: #0A0C1A;
   color: white;
+  position: fixed;
 }
 
 .navbar a {

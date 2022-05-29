@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid'
 
 const About = () => {
     return(
-        <Container>
+        <Container className="container">
         <Grid container spacing={1}>
             <Grid item xs={12} align="left">
             <h1>About</h1>

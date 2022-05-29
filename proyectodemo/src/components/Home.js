@@ -21,7 +21,7 @@ const Home = () => {
     }
 
     return(
-        <Container>
+        <Container className="container">
             <Grid container spacing={1}>
                 <Grid item xs={12} align="center">
                     <h1>Improve your gaming and #findyourline</h1>
