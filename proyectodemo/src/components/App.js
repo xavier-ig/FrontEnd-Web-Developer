@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { RUTAS, siteURL } from '../helpers/constants';
+import { imgAd, RUTAS, siteURL } from '../helpers/constants';
 import About from './About';
 import ErrorPage from './ErrorPage';
 import Header from './Header';
@@ -53,6 +53,9 @@ const App = () => {
             </Routes>
             <br/>
             <Footer siteURL={siteURL}/>
+            <br/>
+            <div align="center"><a href="https://store.playstation.com/en-us/product/UP9000-PPSA01317_00-GT7STD0000000PS5/" target="_blank" rel="noreferrer"><img width="50%" align="center" src={imgAd} /></a></div>
+            <br/>
         </Router>    
     </div>
   );
